@@ -1,0 +1,11 @@
+{
+	"name": "scroll-sentinel",
+	"version": "0.0.1",
+	"author": "Hannah Woodward",
+	"scripts": {
+		"lint": "eslint scroll-sentinel.js"
+	},
+	"devDependencies": {
+		"eslint": "^5.12.1"
+	}
+}
