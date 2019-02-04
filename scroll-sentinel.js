@@ -1,5 +1,6 @@
 export default class ScrollSentinel {
 	constructor( options ) {
+		options = options || {};
 		const defaults = {
 			container: window,
 			items: [],
