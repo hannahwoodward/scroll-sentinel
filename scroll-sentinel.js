@@ -37,6 +37,7 @@ export default class ScrollSentinel {
     requestAnimationFrame(update)
     if (this.container === window) {
       window.addEventListener('resize', runItemCallbacks)
+      window.addEventListener('orientationchange', runItemCallbacks)
     }
 
     function update() {
