@@ -15,7 +15,7 @@ new ScrollSentinel( {
 } );
 ```
 
-NB: Item callbacks are only run on vertical scroll change by default. `forceRun` will be automatically set to true if any un-throttled items are added.
+NB: Item callbacks are only run on vertical or horizontal scroll change by default. `forceRun` will be automatically set to true if any un-throttled items are added.
 
 ### Items
 
@@ -24,7 +24,7 @@ When triggered, ScrollSentinel loops through its items and runs the function fx 
 const item = {
   element: SOME_EL,   // REQUIRED could be a DOM node, array, object, etc,
   fx: ( el ) => {},  // REQUIRED the callback to run on the element
-  dyThrottle: true   // DEFAULT: true - set to false if you would like the callback to be run on every frame
+  dsThrottle: true   // DEFAULT: true - set to false if you would like the callback to be run on every frame
 };
 const sm = new ScrollSentinel({
   items: [ item ]
@@ -49,14 +49,14 @@ sm.add( {
   fx: ( obj ) => {
     obj.processItems(); // uncloak function
   },
-  dyThrottle: false // run on every frame
+  dsThrottle: false // run on every frame
 } );
 
-// The below function will still only run on DY change as dyThrottle is set per item (and defaults to true)
+// The below function will still only run on scroll (horizontal or vertical) as dsThrottle is set per item (and defaults to true)
 sm.add( {
   element: some_node,
   fx: ( node ) => {
-    console.log( 'DY changed' );
+    console.log( 'DS changed' );
   }
 } );
 ```
