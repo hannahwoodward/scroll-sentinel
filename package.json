@@ -6,6 +6,6 @@
     "lint": "eslint scroll-sentinel.js"
   },
   "devDependencies": {
-    "eslint": "^5.12.1"
+    "eslint": "^6.5.1"
   }
 }
